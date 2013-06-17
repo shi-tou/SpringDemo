@@ -7,9 +7,6 @@ using System.Configuration;
 
 namespace YLB.Common
 {
-    /// <summary>
-    /// 创建人：℡乄℡瞬间：http://www.github.com/yksoft/springdemo
-    /// </summary>
     public class Config
     {
         #region 属性

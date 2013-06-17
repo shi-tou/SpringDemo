@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--创建人：℡乄℡瞬间：http://www.github.com/yksoft/springdemo-->
 <objects>
   <description>
     注入配置
   </description>
-  <!--登录-->
-  <object id="UserDao" type="YLB.Dao.UserDao,YLB.Dao">
-  </object>
-  <object id="UserService" type="YLB.Service.UserService,YLB.Service">
+  <!--登录-->  
+  <object id="UserService" type="YLB.Service.UserService,YLB.Service"><!--此处进行注入：将类型为IUserService的属性UserService注入到YLB.Service.UserService-->
+    <!--引向ID为UserDao的Object的节点-->
     <property name="UserDao" ref="UserDao" />
+  </object>
+  <object id="UserDao" type="YLB.Dao.UserDao,YLB.Dao"><!--此处进行注入：将类型为IUserDao的属性UserDao注入到YLB.Dao.UserDao-->
   </object>
 </objects>

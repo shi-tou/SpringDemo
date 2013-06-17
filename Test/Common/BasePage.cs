@@ -8,7 +8,6 @@ using System.Web.UI.HtmlControls;
 namespace Test
 {
     /// <summary>
-    /// 创建人：℡乄℡瞬间：http://www.github.com/yksoft/springdemo
     /// 前台页面基类
     /// </summary>
     public class BasePage : Page

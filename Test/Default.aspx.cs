@@ -22,9 +22,9 @@ namespace Test
         {
             if (!IsPostBack)
             {
-                StringBuilder sb=new StringBuilder();
-                sb.Append(cfg["Username"]);
-                sb.Append("-" + cfg["Password"]);
+                StringBuilder sb = new StringBuilder();
+                sb.Append("数据库地址：" + cfg["db.datasource"]);
+                sb.Append("<br/>数据库名称：" + cfg["db.database"]);
                 Response.Write(sb);
             }
         }

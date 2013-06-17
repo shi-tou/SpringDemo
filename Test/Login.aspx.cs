@@ -8,11 +8,9 @@ using YLB.IService;
 
 namespace Test
 {
-    /// <summary>
-    /// 创建人：℡乄℡瞬间：http://www.github.com/yksoft/springdemo
-    /// </summary>
     public partial class Login : System.Web.UI.Page
     {
+        //注入
         public IUserService UserService
         {
             set;
@@ -37,7 +35,7 @@ namespace Test
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this, typeof(Page), " ", "alert('账号/密码不正确')", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), " ", "alert('账号/密码不正确！')", true);
             }
         }
     }

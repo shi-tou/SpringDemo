@@ -5,8 +5,7 @@ using System.Text;
 
 namespace YLB.Model
 {
-    /// <summary> 
-    /// 创建人：℡乄℡瞬间：http://www.github.com/yksoft/springdemo
+    /// <summary>
     /// 用户实体
     /// </summary>
     public class UserModel
@@ -41,21 +40,20 @@ namespace YLB.Model
         /// <summary>
         /// 模拟用户数据，用于测试
         /// </summary>
-        public List<UserModel>Users
+        public List<UserModel> Users
         {
-            get 
+            get
             {
                 List<UserModel> listUser = new List<UserModel>();
-                for(int i=0; i<10 ; i++)
+                for (int i = 0; i < 10; i++)
                 {
-                    UserModel u=new UserModel();
+                    UserModel u = new UserModel();
                     u.userID = i + 1;
                     u.userName = "admin" + (i + 1).ToString();
                     u.passWord = "admin" + (i + 1).ToString();
                     listUser.Add(u);
                 }
                 return listUser;
-                    
             }
         }
 

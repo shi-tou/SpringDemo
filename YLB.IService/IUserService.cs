@@ -5,9 +5,6 @@ using System.Text;
 
 namespace YLB.IService
 {
-    /// <summary>
-    /// 创建人：℡乄℡瞬间：http://www.github.com/yksoft/springdemo
-    /// </summary>
     public interface IUserService
     {
         /// <summary>

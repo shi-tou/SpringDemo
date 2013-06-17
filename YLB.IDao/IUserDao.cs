@@ -5,9 +5,6 @@ using System.Text;
 
 namespace YLB.IDao
 {
-    /// <summary>
-    /// 创建人：℡乄℡瞬间：http://www.github.com/yksoft/springdemo
-    /// </summary>
     public interface IUserDao
     {
         /// <summary>

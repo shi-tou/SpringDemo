@@ -7,9 +7,6 @@ using YLB.IDao;
 
 namespace YLB.Service
 {
-    /// <summary>
-    /// 创建人：℡乄℡瞬间：http://www.github.com/yksoft/springdemo
-    /// </summary>
     public class UserService : IUserService
     {
         private IUserDao userDao
