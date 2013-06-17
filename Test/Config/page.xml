@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+ <!--创建人：℡乄℡瞬间：http://www.github.com/yksoft/springdemo-->
+<objects>
+  <description>
+    页面注入配置
+  </description>
+  <!--登录-->
+  <object type="Login.aspx">
+    <!--引向service文件里的UserServicea节点对象-->
+    <property name="UserService" ref="UserService"/>
+  </object>
+</objects>

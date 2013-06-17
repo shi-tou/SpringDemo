@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--创建人：℡乄℡瞬间：http://www.github.com/yksoft/springdemo-->
+<objects>
+  <description>
+    注入配置
+  </description>
+  <!--登录-->
+  <object id="UserDao" type="YLB.Dao.UserDao,YLB.Dao">
+  </object>
+  <object id="UserService" type="YLB.Service.UserService,YLB.Service">
+    <property name="UserDao" ref="UserDao" />
+  </object>
+</objects>
