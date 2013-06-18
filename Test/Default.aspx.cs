@@ -6,11 +6,19 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using YLB.Common;
 using System.Text;
+using YLB.IService;
+using System.Data;
 
 namespace Test
 {
     public partial class _Default : BasePage
     {
+        //注入
+        public IUserService UserService
+        {
+            get;
+            set;
+        }
         /// <summary>
         /// Config配置实例
         /// </summary>

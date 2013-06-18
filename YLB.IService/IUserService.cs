@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 
 namespace YLB.IService
 {
-    public interface IUserService
+    public interface IUserService : IBaseService
     {
         /// <summary>
-        /// 获取字符串
+        /// 0-登录成功;1-用户名不存在;2-密码不正确
         /// </summary>
-        bool Login(string userName, string passWord);
+        int Login(string userName, string passWord);
     }
 }

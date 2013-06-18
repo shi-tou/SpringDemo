@@ -13,8 +13,8 @@ namespace Test
         //注入
         public IUserService UserService
         {
-            set;
             get;
+            set;
         }
 
         /// <summary>
@@ -29,13 +29,18 @@ namespace Test
         /// </summary>
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            if (UserService.Login(this.txtUserName.Text, this.txtPassWord.Text))
+            int res=UserService.Login(this.txtUserName.Text, this.txtPassWord.Text);
+            if (res==0)
             {
                 ScriptManager.RegisterStartupScript(this, typeof(Page), " ", "window.location='default.aspx';", true);
             }
+            else if (res == 1)
+            {
+                ScriptManager.RegisterStartupScript(this, typeof(Page), " ", "alert('用户名不存在！')", true);
+            }
             else
             {
-                ScriptManager.RegisterStartupScript(this, typeof(Page), " ", "alert('账号/密码不正确！')", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), " ", "alert('密码不正确！')", true);
             }
         }
     }
