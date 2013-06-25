@@ -84,6 +84,20 @@ namespace YLB.Dao
                 sbSql.AppendFormat("delete from {0} where {1}", tableName, where);
             return AdoTemplate.ExecuteNonQuery(CommandType.Text, sbSql.ToString());
         }
+        /// <summary>
+        /// 删除记录
+        /// </summary>
+        /// <param name="tableName">表名</param>
+        /// <param name="where">删除条件</param>
+        /// <returns></returns>
+        public int Delete(string tableName, string keycol, object obj)
+        {
+            StringBuilder sbSql = new StringBuilder();
+            sbSql.AppendFormat("delete from {0} where {1}=@{1}", tableName, keycol);
+            IDbParameters param = AdoTemplate.CreateDbParameters();
+            param.AddWithValue(keycol, obj);
+            return AdoTemplate.ExecuteNonQuery(CommandType.Text, sbSql.ToString(), param);
+        }
         #endregion
 
         #region DataSet

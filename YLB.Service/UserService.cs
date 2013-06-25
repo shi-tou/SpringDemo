@@ -24,7 +24,7 @@ namespace YLB.Service
         public int Login(string userName, string passWord)
         {
             DataTable dt = userDao.GetDataTable("T_Users", "*", "UserName='" + userName + "'");
-            if (dt.Rows.Count < 0)
+            if (dt.Rows.Count == 0)
             {
                 return 1;
             }
