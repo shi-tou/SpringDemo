@@ -1,0 +1,10 @@
+G:\测试Project\Base\YLB.Model\obj\Debug\ResolveAssemblyReference.cache
+G:\测试Project\Base\YLB.Model\bin\Debug\YLB.Model.dll
+G:\测试Project\Base\YLB.Model\bin\Debug\YLB.Model.pdb
+G:\测试Project\Base\YLB.Model\obj\Debug\YLB.Model.dll
+G:\测试Project\Base\YLB.Model\obj\Debug\YLB.Model.pdb
+E:\学习Demo\SpringDemo\YLB.Model\bin\Debug\YLB.Model.dll
+E:\学习Demo\SpringDemo\YLB.Model\bin\Debug\YLB.Model.pdb
+E:\学习Demo\SpringDemo\YLB.Model\obj\Debug\ResolveAssemblyReference.cache
+E:\学习Demo\SpringDemo\YLB.Model\obj\Debug\YLB.Model.dll
+E:\学习Demo\SpringDemo\YLB.Model\obj\Debug\YLB.Model.pdb
