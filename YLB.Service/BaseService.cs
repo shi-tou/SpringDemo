@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
-using YLB.IService;
-using YLB.IDao;
+using YLB.Dao;
 
 namespace YLB.Service
 {
@@ -109,6 +108,10 @@ namespace YLB.Service
         public DataTable GetDataTable(string tableName, string fields)
         {
             return BaseDao.GetDataTable(tableName,fields);
+        }
+        public DataTable GetDatatable(string tableName, string key, string value)
+        {
+            return BaseDao.GetDatatable(tableName, key,value);
         }
         /// <summary>
         /// 获取DataTable表数据

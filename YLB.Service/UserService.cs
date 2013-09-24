@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using YLB.IService;
-using YLB.IDao;
 using System.Data;
+using YLB.Dao;
 
 namespace YLB.Service
 {
@@ -23,7 +22,7 @@ namespace YLB.Service
         /// <returns></returns>
         public int Login(string userName, string passWord)
         {
-            DataTable dt = userDao.GetDataTable("T_Users", "*", "UserName='" + userName + "'");
+            DataTable dt = userDao.GetDataTable("T_User", "*", "UserName='" + userName + "'");
             if (dt.Rows.Count == 0)
             {
                 return 1;

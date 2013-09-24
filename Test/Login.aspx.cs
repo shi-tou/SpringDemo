@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using YLB.IService;
+using YLB.Service;
 
 namespace Test
 {
     public partial class Login : System.Web.UI.Page
     {
         //注入
+        private IUserService userService;
         public IUserService UserService
         {
-            get;
-            set;
+            set { userService = value; }
         }
 
         /// <summary>
@@ -29,8 +28,8 @@ namespace Test
         /// </summary>
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            int res=UserService.Login(this.txtUserName.Text, this.txtPassWord.Text);
-            if (res==0)
+            int res = userService.Login(this.txtUserName.Text, this.txtPassWord.Text);
+            if (res == 0)
             {
                 ScriptManager.RegisterStartupScript(this, typeof(Page), " ", "window.location='default.aspx';", true);
             }

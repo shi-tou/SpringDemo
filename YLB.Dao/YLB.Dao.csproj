@@ -73,14 +73,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDao.cs" />
+    <Compile Include="IBaseDao.cs" />
+    <Compile Include="IUserDao.cs" />
     <Compile Include="UserDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\YLB.IDao\YLB.IDao.csproj">
-      <Project>{7B3252CB-91A3-4A34-9A76-21836562B9DB}</Project>
-      <Name>YLB.IDao</Name>
-    </ProjectReference>
     <ProjectReference Include="..\YLB.Model\YLB.Model.csproj">
       <Project>{8EA6D5A1-2D0D-466C-B20C-AE83644BD0FD}</Project>
       <Name>YLB.Model</Name>

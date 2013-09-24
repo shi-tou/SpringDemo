@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 
-namespace YLB.IDao
+namespace YLB.Dao
 {
     /// <summary>
     /// 数据访问基类接口
@@ -79,6 +79,7 @@ namespace YLB.IDao
         /// <param name="fields">数据字段，如：string fields="ID,Name,Sex";如为"*",则为所有字段</param>
         /// <returns>DataTable表数据</returns>
         DataTable GetDataTable(string tableName, string fields);
+        DataTable GetDatatable(string tableName, string key, string value);
         /// <summary>
         /// 获取DataTable表数据
         /// </summary>

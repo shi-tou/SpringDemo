@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Spring.Data.Core;
-using YLB.IDao;
 using System.Data;
 using Spring.Data.Common;
 
 namespace YLB.Dao
 {
     /// <summary>
-    /// 数据访问基类
+    /// 数据访问基类(===========供测试用，查查询未使用参数化，强烈要求项目中进行完善===========)
     /// </summary>
     public class BaseDao :AdoDaoSupport, IBaseDao
     {
@@ -156,6 +155,19 @@ namespace YLB.Dao
         public DataTable GetDataTable(string tableName, string fields)
         {
             return GetDataTable(tableName, fields, "");
+        }
+        public DataTable GetDatatable(string tableName, string key, string value)
+        {
+            string sql = "select * from " + tableName;
+            IDbParameters param = AdoTemplate.CreateDbParameters();
+            if (!string.IsNullOrEmpty(key))
+            {
+                sql += " where " + key + "=@" + value;
+                param.AddWithValue(key, value);
+            }
+            DataTable dt = AdoTemplate.DataTableCreateWithParams(CommandType.Text, sql, param);
+            dt.TableName = tableName;
+            return dt;
         }
         /// <summary>
         /// 获取DataSet数据集

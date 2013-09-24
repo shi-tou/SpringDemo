@@ -67,18 +67,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseService.cs" />
+    <Compile Include="IBaseService.cs" />
+    <Compile Include="IUserService.cs" />
     <Compile Include="UserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\YLB.IDao\YLB.IDao.csproj">
-      <Project>{7B3252CB-91A3-4A34-9A76-21836562B9DB}</Project>
-      <Name>YLB.IDao</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YLB.IService\YLB.IService.csproj">
-      <Project>{F805E390-2491-4D65-ABE3-2791A6D86C08}</Project>
-      <Name>YLB.IService</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -96,6 +88,12 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YLB.Dao\YLB.Dao.csproj">
+      <Project>{05831CA4-FEAF-4509-AE54-7689FB60BDF5}</Project>
+      <Name>YLB.Dao</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
